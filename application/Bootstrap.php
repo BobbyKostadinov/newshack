@@ -8,5 +8,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view = $this->getResource('view');
         $view->doctype('XHTML1_STRICT');
     }
+
+   protected function _initAutoloader()
+   {
+        $autoloader = Zend_Loader_Autoloader::getInstance();
+        $autoloader->registerNamespace("Newshack");
+   }
 }
 
